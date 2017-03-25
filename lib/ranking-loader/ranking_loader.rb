@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'yaml'
 require 'pry'
 
-class RepoRankingLoader
+class RankingLoader
   def run(max_ranking)
     @con = connection
     @repos = []
@@ -61,4 +61,4 @@ class RepoRankingLoader
   end
 end
 
-RepoRankingLoader.new.run(1000)
+RankingLoader.new.run(1000)
