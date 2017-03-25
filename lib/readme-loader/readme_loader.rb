@@ -18,12 +18,12 @@ class ReadmeLoader
       puts "[repo: #{repo[:name]}] processing"
       page = load_page(repo[:path])
 
-      continue if page.nil?
+      next if page.nil?
 
       file_name = pluck_readme_file_name(page)
       raw = load_raw("#{repo[:path]}/master/#{file_name}")
 
-      continue if raw.nil?
+      next if raw.nil?
 
       dump(repo[:name], raw)
       puts "[repo: #{repo[:name]}] completed"
