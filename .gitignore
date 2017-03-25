@@ -53,3 +53,13 @@ build-iPhoneSimulator/
 
 # intellij
 .idea
+
+# ruby
+.ruby-version
+
+# output
+log/*.log
+out/result.yaml
+out/repositories.yaml
+out/plain-texts/*.text
+out/readmes/*.md
