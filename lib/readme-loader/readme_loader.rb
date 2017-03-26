@@ -101,5 +101,3 @@ class ReadmeLoader
     end
   end
 end
-
-ReadmeLoader.new.run

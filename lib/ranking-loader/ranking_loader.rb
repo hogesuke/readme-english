@@ -61,8 +61,8 @@ class RankingLoader
   end
 
   def dump
-    YAML.dump({ repositories: @repos }, File.open(File.expand_path('../../../out/repositories.yaml', __FILE__), 'w'))
+    file = File.open(File.expand_path('../../../out/repositories.yaml', __FILE__), 'w')
+    YAML.dump({ repositories: @repos }, file)
+    file.close
   end
 end
-
-RankingLoader.new.run(20)

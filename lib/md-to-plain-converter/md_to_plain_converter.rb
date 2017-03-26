@@ -12,9 +12,13 @@ class MdToPlainConverter
     paths = file_paths
 
     paths.each do |path|
+      puts "[path: #{path}] processing"
+
       plain_text = convert(read(path))
       file_name = File.basename(path, 'md')
       dump(file_name, plain_text)
+
+      puts "[path: #{path}] completed"
     end
   end
 
@@ -36,5 +40,3 @@ class MdToPlainConverter
     end
   end
 end
-
-MdToPlainConverter.new.run

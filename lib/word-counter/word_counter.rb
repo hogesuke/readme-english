@@ -83,8 +83,8 @@ class WordCounter
   end
 
   def dump
-    YAML.dump(@counts, File.open(File.expand_path('../../../out/result.yaml', __FILE__), 'w'))
+    file = File.open(File.expand_path('../../../out/result.yaml', __FILE__), 'w')
+    YAML.dump(@counts, file)
+    file.close
   end
 end
-
-WordCounter.new.run
